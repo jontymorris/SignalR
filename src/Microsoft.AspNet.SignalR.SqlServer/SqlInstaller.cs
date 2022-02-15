@@ -54,7 +54,8 @@ namespace Microsoft.AspNet.SignalR.SqlServer
             var edition = (int)operation.ExecuteScalar();
 
             return (edition >= SqlEngineEdition.Standard && edition <= SqlEngineEdition.Express) ||
-                edition == SqlEngineEdition.SqlAzureManagedInstance;
+                edition == SqlEngineEdition.SqlAzureManagedInstance ||
+                edition == SqlEngineEdition.SqlAzure;
         }
 
         private static class SqlEngineEdition
